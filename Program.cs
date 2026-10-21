@@ -29,7 +29,7 @@
                     string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
                     string fileName = Path.Combine(path, @"..\..\..\typedemo_02.txt");
 
-                    System.IO.File.WriteAllText(fileName, hoestakTekst);
+                    System.IO.File.WriteAllText(fileName, soegeWord);
 
                 }
             }
