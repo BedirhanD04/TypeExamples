@@ -20,16 +20,12 @@
                 Console.WriteLine($"Ordet ‘{soegeWord}’ forekommer {antalForekomster} gange.");
                 if ((bool)countState)
                 {
-                    // Source - https://stackoverflow.com/a/19329696
-                    // Posted by xxbbcc, modified by community. See post 'Timeline' for change history
-                    // Retrieved 2026-10-18, License - CC BY-SA 3.0
+                    Saver saverUser = new UserFolderSave();
+                    saverUser.Save("typedemo_02.txt", soegeWord);
 
-                    //string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    //string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                    string path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
-                    string fileName = Path.Combine(path, @"..\..\..\typedemo_02.txt");
-
-                    System.IO.File.WriteAllText(fileName, soegeWord);
+                    Saver saverProject = new ProjectFolderSave();
+                    saverProject.Save("typedemo_project.txt", soegeWord);
+                    Console.ReadKey();
 
                 }
             }
