@@ -95,6 +95,17 @@ namespace ConsoleApp_typedemo_01
                 return false;
             }
 
+            /*
+            Selvom dynamic giver stor fleksibilitet ved at omgå typetjek under opsamlingen, 
+            er der tre primære grunde til, at det ofte betragtes som usikkert eller farligt i praksis. 
+            For det første er der ingen type-sikkerhed ved compile-time, hvilket betyder, 
+            at C#-compileren ikke kan opdage fejl på forhånd, og hvis en metode eller egenskab ikke eksisterer, 
+            vil programmet crashe med en kørselstidsfejl undervejs. For det andet er der ingen IntelliSense eller 
+            automatisk kodefuldførelse i udviklingsmiljøet, fordi typen ikke er kendt på forhånd, hvilket gør det nemmere at lave fejl. 
+            For det tredje giver det en ydeevneforringelse, 
+            fordi .NET-motoren skal bruge ekstra ressourcer på at undersøge typer og finde metoder dynamisk, mens programmet kører.
+            */
+
         }
 
     }
